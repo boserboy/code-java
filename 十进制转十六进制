@@ -1,0 +1,58 @@
+import java.util.*;
+class Trans
+{
+	public static void main(String[]args)
+	{
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt(),i=0,num1=1;
+		char ch;
+		char[] arr = new char[100];
+		while(num%16!=0)
+			{
+				num1=num%16;
+				arr[i]=transform(num1);
+				num=num/16;
+				i++;
+			}
+		for(int j=i-1;j>=0;j--)//一定要从i-1开始
+				System.out.print(arr[j]);
+		}
+	static char transform(int i)
+	{
+		char  ch='0';
+		switch(i)
+		{
+			case 1 :ch='1';
+			break;
+			case 2 :ch='2';
+			break;
+			case 3:ch='3';
+			break;
+			case 4 :ch='4';
+			break;
+			case 5 :ch='5';
+			break;
+			case 6 :ch='6';
+			break;
+			case 7 :ch='7';
+			break;
+			case 8 :ch='8';
+			break;
+			case 9 :ch='9';
+			break;
+			case 10 :ch='A';
+			break;
+			case 11:ch='B';
+			break;
+			case 12:ch='C';
+			break;
+			case 13:ch='D';
+			break;
+			case 14:ch='E';
+			break;
+			case 15:ch='F';
+			break;
+		}
+		return ch;
+	}
+}# code-java
